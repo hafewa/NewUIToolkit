@@ -163,7 +163,7 @@ MonoBehaviour:
       guid: dd85ce99288c2f8488447fa511b1c0d6
     - name: CustomUI
       pathPrefix: UI
-      guid: 2f427a66befcda14d815bc42790a4992
+      guid: 9bcf7ba7d0ac5d042af81a254c2a723c
   - Id: Scripts
     Resources:
     - name: SampleScript
