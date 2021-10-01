@@ -51,9 +51,9 @@ public class ManagedUIDocument : MonoBehaviour, IManagedUI
         var from = Root.style.opacity.value;
         var to = visible ? 1f : 0f;
         var tween = new FloatTween(from, to, duration ?? FadeTime, v => Root.style.opacity = v);
-        if (visible) Document.rootVisualElement.visible = true;
+        if (visible) Root.visible = true;
         await opacityTweener.RunAsync(tween, asyncToken, Document);
-        if (!visible) Document.rootVisualElement.visible = false;
+        if (!visible) Root.visible = false;
     }
 
     public virtual void SetFont (Font font, TMP_FontAsset tmpFont) { }
@@ -64,14 +64,14 @@ public class ManagedUIDocument : MonoBehaviour, IManagedUI
     {
         if (opacityTweener.Running) opacityTweener.CompleteInstantly();
         Root.style.opacity = visible ? 1 : 0;
-        Document.rootVisualElement.visible = visible;
+        Root.visible = visible;
         HandleVisibilityChanged(visible);
     }
 
     protected virtual void HandleVisibilityChanged (bool visible)
     {
         this.visible = visible;
-        Document.rootVisualElement.SetEnabled(visible);
+        Root.SetEnabled(visible);
         OnVisibilityChanged?.Invoke(visible);
     }
 
