@@ -1,6 +1,5 @@
 using Naninovel;
 using Naninovel.UI;
-using UniRx.Async;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
