@@ -169,3 +169,11 @@ MonoBehaviour:
     - name: SampleScript
       pathPrefix: Scripts
       guid: 650b8c2333c27624aabce80c245766c0
+  - Id: Unlockables
+    Resources:
+    - name: CG/1
+      pathPrefix: Unlockables
+      guid: 14fcf3d6a6d162942ac395f66c897c09
+    - name: CG/2
+      pathPrefix: Unlockables
+      guid: 07dab55e20989b140a00d9445f05e000
